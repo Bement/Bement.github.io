@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lima Ai's Resume | 艾丽玛的简历</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-color: #f8fafc; /* Tailwind gray-50 */
+        }
+        .lang-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .lang-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .section-title {
+            border-bottom: 2px solid #3b82f6; /* Tailwind blue-500 */
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+        .job-entry {
+            border-left: 3px solid #e5e7eb; /* Tailwind gray-200 */
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .job-entry::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 9999px;
+            background-color: #3b82f6; /* Tailwind blue-500 */
+            border: 2px solid #ffffff;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto max-w-4xl p-4 sm:p-8">
+        
+        <!-- Language Switcher -->
+        <div class="text-right mb-6">
+            <button id="btn-en" class="px-4 py-2 bg-blue-500 text-white rounded-l-md font-semibold transition-colors duration-300">English</button>
+            <button id="btn-zh" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-r-md font-semibold transition-colors duration-300">中文</button>
+        </div>
+
+        <!-- English Content -->
+        <div id="lang-en" class="lang-content active bg-white p-6 sm:p-10 rounded-xl shadow-lg">
+            <!-- Header -->
+            <header class="text-center mb-10">
+                <h1 class="text-4xl font-bold text-gray-900">Lima Ai</h1>
+                <div class="mt-3 text-gray-600 flex justify-center items-center flex-wrap gap-x-6 gap-y-2">
+                    <a href="mailto:limaa@andrew.cmu.edu" class="flex items-center hover:text-blue-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        limaa@andrew.cmu.edu
+                    </a>
+                    <span class="flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                         +1 (412) 983-2350
+                    </span>
+                    <a href="https://linkedin.com/in/lima-alice-ai-4103ab241" target="_blank" class="flex items-center hover:text-blue-600">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                        linkedin.com/in/lima-alice-ai
+                    </a>
+                </div>
+            </header>
+            
+            <!-- Professional Summary -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-blue-600 section-title">Professional Summary</h2>
+                <p class="text-gray-700 leading-relaxed">Highly motivated and analytical junior at Carnegie Mellon University's Tepper School of Business, pursuing a B.S. in Finance and Statistics (GPA: 3.8/4.0). Possesses a strong foundation in quantitative analysis, financial modeling, and data-driven problem-solving. Proven ability to adapt and excel in diverse environments through internships spanning M&A transactions, industry research, business analytics, and audit at leading firms.</p>
+            </section>
+            
+            <!-- Education -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-blue-600 section-title">Education</h2>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-lg font-bold">Carnegie Mellon University, Tepper School of Business</h3>
+                        <p class="text-md font-medium text-gray-700">Bachelor of Science in Finance and Statistics</p>
+                        <p class="text-sm text-gray-500">GPA: 3.8/4.0 (Dean's List Honors)</p>
+                    </div>
+                    <div class="text-right text-sm text-gray-600">
+                        <p>Pittsburgh, PA</p>
+                        <p>Aug 2022 – May 2026</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-blue-600 section-title">Experience</h2>
+                <div class="job-entry">
+                    <h3 class="text-lg font-bold">Transactions Consulting Intern</h3>
+                    <p class="font-semibold text-gray-700">Deloitte <span class="text-gray-500 font-normal ml-2">| Jun 2024 - Aug 2024, Shanghai</span></p>
+                    <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                        <li>Facilitated M&A financial due diligence for a ~$400M deal by proposing equity structure, reviewing historical events, and auditing production base.</li>
+                        <li>Created a potential buyers list of over 400 IPOed companies in Mainland China and Hong Kong.</li>
+                        <li>Assisted in drafting a service proposal for a potential logistics client, outlining due diligence scope, timeline, and fees.</li>
+                    </ul>
+                </div>
+                <div class="job-entry">
+                    <h3 class="text-lg font-bold">Industry Research Intern</h3>
+                    <p class="font-semibold text-gray-700">USMART Securities Limited <span class="text-gray-500 font-normal ml-2">| May 2024 - Aug 2024, Remote</span></p>
+                    <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                        <li>Researched 50+ Chinese beauty brands in Southeast Asian markets to identify investment opportunities.</li>
+                        <li>Drafted an industry research report on the beauty and skincare sector.</li>
+                        <li>Analyzed promotional strategies for China's online education sector, focusing on customer acquisition and retention.</li>
+                    </ul>
+                </div>
+                <div class="job-entry">
+                    <h3 class="text-lg font-bold">Business Analytics Intern</h3>
+                    <p class="font-semibold text-gray-700">Capgemini <span class="text-gray-500 font-normal ml-2">| Jun 2023 - Aug 2023, Shanghai</span></p>
+                    <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                        <li>Developed user guides and tutorial videos for the QuickBI data visualization platform.</li>
+                        <li>Quantified digital transformation benefits to the HSBC Pinnacle FinTech CFO: 80% reduced data retrieval time, 50% increased storage, 90% improved accuracy.</li>
+                        <li>Independently completed the recharge model, exceeding client expectations.</li>
+                    </ul>
+                </div>
+                 <div class="job-entry">
+                    <h3 class="text-lg font-bold">Audit Intern</h3>
+                    <p class="font-semibold text-gray-700">RSM International Ltd. <span class="text-gray-500 font-normal ml-2">| Jun 2022 - Aug 2022, Shanghai</span></p>
+                    <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                        <li>Performed an IPO application audit for a pharmaceutical company, verifying financial statement accuracy.</li>
+                        <li>Inspected 400 source documents daily to validate income, inventory, and contract data.</li>
+                        <li>Collaborated to perform financial reconciliation and analysis, identifying and resolving discrepancies.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Leadership & Activities -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-blue-600 section-title">Leadership & Activities</h2>
+                <div class="job-entry">
+                     <h3 class="text-lg font-bold">Equity Research Analyst - TMT Sector</h3>
+                     <p class="font-semibold text-gray-700">Tartan Student Fund <span class="text-gray-500 font-normal ml-2">| Jan 2024 - Present, Pittsburgh</span></p>
+                     <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                        <li>Contributed to a student-led fund with $100,000+ AUM, achieving a 10% annualized return.</li>
+                        <li>Delivered 5 comprehensive stock pitches, including creation and valuation modeling.</li>
+                        <li>Pitched the sell of Crown Castle, saving the fund approximately $4,800.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Skills -->
+            <section>
+                <h2 class="text-2xl font-bold text-blue-600 section-title">Skills</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-bold text-md mb-2">Technical Skills</h3>
+                        <p><strong class="text-gray-800">Programming:</strong> Python, R, SQL, Java</p>
+                        <p><strong class="text-gray-800">Software & Tools:</strong> Microsoft Excel (Advanced), PowerPoint, Power BI, Bloomberg, Capital IQ</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-md mb-2">Languages</h3>
+                        <p>Mandarin (Native), English (Native), Japanese (Fluent, JLPT N1)</p>
+                    </div>
+                     <div>
+                        <h3 class="font-bold text-md mb-2">Financial Skills</h3>
+                        <p>Financial Modeling, Data Analysis, Equity Research, Valuation, M&A Analysis, Due Diligence</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Chinese Content -->
+        <div id="lang-zh" class="lang-content bg-white p-6 sm:p-10 rounded-xl shadow-lg">
+             <!-- Header -->
+             <header class="text-center mb-10">
+                <h1 class="text-4xl font-bold text-gray-900">艾丽玛</h1>
+                <div class="mt-3 text-gray-600 flex justify-center items-center flex-wrap gap-x-6 gap-y-2">
+                     <a href="mailto:13636482560@163.com" class="flex items-center hover:text-blue-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        13636482560@163.com
+                    </a>
+                    <span class="flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        (+86) 136-3648-2560
+                    </span>
+                     <span class="flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        上海市西康路989弄17号1901室
+                    </span>
+                </div>
+            </header>
+
+            <!-- 我的特点 -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-blue-600 section-title">我的特点</h2>
+                <p class="text-gray-700 leading-relaxed">卡内基梅隆大学泰珀商学院金融与统计双专业(GPA: 3.8/4.0)大三学生,积极主动,擅长分析。在量化分析、财务建模和数据驱动型问题解决方面拥有扎实的基础。拥有在领先机构参与并购、分析及审计等多元化实习经验,适应及学习能力强。</p>
+            </section>
+            
+            <!-- 教育背景 -->
+            <section class="mb-8">
+                 <h2 class="text-2xl font-bold text-blue-600 section-title">教育背景</h2>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-lg font-bold">卡内基梅隆大学</h3>
+                        <p class="text-md font-medium text-gray-700">金融和统计双专业</p>
+                        <p class="text-sm text-gray-500">GPA: 3.8/4.0 (院长荣誉名单)</p>
+                    </div>
+                    <div class="text-right text-sm text-gray-600">
+                        <p>美国, 匹兹堡</p>
+                        <p>2022.08 – 2026.05</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 实习经历 -->
+            <section class="mb-8">
+                <h2 class="text-2xl font-bold text-blue-600 section-title">实习经历</h2>
+                 <div class="job-entry">
+                    <h3 class="text-lg font-bold">交易咨询实习生</h3>
+                    <p class="font-semibold text-gray-700">德勤(Deloitte) <span class="text-gray-500 font-normal ml-2">| 2024.06 - 2024.08, 中国上海</span></p>
+                    <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                        <li>协助导师团队对价值约4亿美元的并购计划进行尽职调查，高效完成工作。</li>
+                        <li>筛选评估超过400家在中国大陆和香港上市的公司，以确定潜在合作对象。</li>
+                        <li>为物流设备客户创建提案，包括尽职调查范围、服务时间表和费用。</li>
+                    </ul>
+                </div>
+                 <div class="job-entry">
+                    <h3 class="text-lg font-bold">远程行业研究实习生</h3>
+                    <p class="font-semibold text-gray-700">USMART Securities Limited <span class="text-gray-500 font-normal ml-2">| 2024.05 - 2024.08, 中国上海</span></p>
+                    <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                        <li>研究逾50个进入东南亚市场的中国美妆护肤品牌，识别投资机会。</li>
+                        <li>撰写关于美妆及护肤行业的深度研究报告。</li>
+                        <li>深入研究中国在线教育推广策略，聚焦客户获客与留存机制。</li>
+                    </ul>
+                </div>
+                 <div class="job-entry">
+                    <h3 class="text-lg font-bold">商业分析实习生</h3>
+                    <p class="font-semibold text-gray-700">凯捷(Capgemini) <span class="text-gray-500 font-normal ml-2">| 2023.06 - 2023.08, 中国上海</span></p>
+                    <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                        <li>为汇丰开发并交付QuickBI（数据可视化平台）的用户指南和教程视频。</li>
+                        <li>向汇丰金融科技CFO量化展示数字化转型成果：数据检索时间减少80%，存储容量增加50%，准确性提高90%。</li>
+                        <li>独立完成和客户的模型讲解，超出了客户的预期并提升了团队声誉。</li>
+                    </ul>
+                </div>
+                <div class="job-entry">
+                    <h3 class="text-lg font-bold">审计实习生</h3>
+                    <p class="font-semibold text-gray-700">容诚会计师事务所上海分所 <span class="text-gray-500 font-normal ml-2">| 2022.06 - 2022.08, 中国上海</span></p>
+                    <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                        <li>对一家制药公司进行IPO事前审计，验证财务报表的准确性和合规性。</li>
+                        <li>每日检查400份源文件（采购合同、发票等），验证公司收入、库存和合同数据。</li>
+                        <li>进行财务核对与分析，识别并上报记录与源文件间的差异或错误。</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 校园经历 -->
+            <section class="mb-8">
+                 <h2 class="text-2xl font-bold text-blue-600 section-title">校园经历</h2>
+                <div class="job-entry">
+                     <h3 class="text-lg font-bold">股票研究分析师 (TMT方向)</h3>
+                     <p class="font-semibold text-gray-700">Tartan Student Fund <span class="text-gray-500 font-normal ml-2">| 2024.01 - 至今, 美国匹兹堡</span></p>
+                     <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                        <li>参与管理超10万美元的学生投资基金，年化回报率达10%。</li>
+                        <li>独立完成了5份深度股票研究报告,涵盖从研究到估值建模的全过程</li>
+                        <li>再评估并调整持仓,成功建议卖出 Crown Castle,为基金规避了约4800美元的潜在损失。</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- 其他信息 -->
+            <section>
+                 <h2 class="text-2xl font-bold text-blue-600 section-title">其他信息</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-bold text-md mb-2">技能</h3>
+                        <p><strong class="text-gray-800">编程语言:</strong> Python, R, SQL, Java</p>
+                        <p><strong class="text-gray-800">软件工具:</strong> Microsoft Excel (高级), Microsoft PowerPoint, Power BI, Bloomberg 终端, Capital IQ</p>
+                    </div>
+                     <div>
+                        <h3 class="font-bold text-md mb-2">语言能力</h3>
+                        <p>中文(母语), 英文(母语水平), 日文(流利, 日本语能力测试 JLPT N1)</p>
+                    </div>
+                     <div>
+                        <h3 class="font-bold text-md mb-2">金融技能</h3>
+                        <p>财务建模, 数据分析, 股权研究, 估值分析, 并购分析, 尽职调查</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const btnEn = document.getElementById('btn-en');
+        const btnZh = document.getElementById('btn-zh');
+        const contentEn = document.getElementById('lang-en');
+        const contentZh = document.getElementById('lang-zh');
+
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                contentEn.classList.add('active');
+                contentZh.classList.remove('active');
+                
+                btnEn.classList.remove('bg-gray-300', 'text-gray-700');
+                btnEn.classList.add('bg-blue-500', 'text-white');
+                
+                btnZh.classList.remove('bg-blue-500', 'text-white');
+                btnZh.classList.add('bg-gray-300', 'text-gray-700');
+            } else if (lang === 'zh') {
+                contentEn.classList.remove('active');
+                contentZh.classList.add('active');
+
+                btnZh.classList.remove('bg-gray-300', 'text-gray-700');
+                btnZh.classList.add('bg-blue-500', 'text-white');
+                
+                btnEn.classList.remove('bg-blue-500', 'text-white');
+                btnEn.classList.add('bg-gray-300', 'text-gray-700');
+            }
+        }
+
+        btnEn.addEventListener('click', () => switchLanguage('en'));
+        btnZh.addEventListener('click', () => switchLanguage('zh'));
+
+        // Set initial language based on browser preference if available
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('zh')) {
+            switchLanguage('zh');
+        } else {
+            switchLanguage('en');
+        }
+    </script>
+
+</body>
+</html>
